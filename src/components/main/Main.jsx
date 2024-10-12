@@ -20,14 +20,16 @@ const Main = ({toggleState}) => {
                   </video>
 
                   <div className='video-details'>
-                    <img src="" alt="logo" />
+                    <div className='img-logo'>
+                      <img src={`https://picsum.photos/id/${index + 5}/100/100`} alt={media.title} />
+                    </div>
                     <div>
                       <h3>
                         { media.description.substring(0, 50)}
                       </h3>
                       <p>{media.subtitle} <br /> 136k views <span>7 months ago</span></p>
                     </div>
-                    <MdMoreVert size={40}/>
+                    <MdMoreVert size={20}/>
                   </div>
                 </div>
               ))
@@ -79,6 +81,16 @@ const MainConinter = styled.div`
     justify-content: space-between;
     padding: 10px 0;
     font-size: 16px;
+    gap: 5px;
     background-color: transparent;
+
+    .img-logo {
+      width: 20%;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
 `
 export default Main

@@ -16,15 +16,15 @@ const Sidebar = ({toggleState}) => {
             <>
                 <div>
                     <div className='homeicons'>
-                        <img src="" alt="logo" />
+                        <GoHome size={24}/>
                         <span>Home</span>
                     </div>
                     <div className='homeicons'>
-                        <img src="" alt="logo" />
+                        <SiYoutubeshorts size={24}/>
                         <span>Shorts</span>
                     </div>
                     <div className='homeicons'>
-                        <img src="" alt="logo" />
+                        <MdOutlineSubscriptions size={24}/>
                         <span>Subscriptions</span>
                     </div>
                 </div>
@@ -166,6 +166,7 @@ const Container = styled.div`
         padding: 10px;
         width: 90%;
         font-size: 13px;
+        align-items: center;
 
         &:hover {
             background-color: gray;
