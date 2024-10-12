@@ -4,13 +4,13 @@ import { GoHome } from 'react-icons/go'
 import { SiYoutubeshorts } from 'react-icons/si'
 import { MdOutlineSubscriptions } from 'react-icons/md'
 import { LiaDownloadSolid } from 'react-icons/lia'
-// import { useSelector } from 'react-redux'
+
 
 const Sidebar = ({toggleState}) => {
 
     
   return (
-    <Container style={{width: `${toggleState ? "18%" : "5%"}`}}>
+    <Container style={{width: `${toggleState ? "18%" : "6%"}`}}>
         {
             toggleState ?
             <>
@@ -152,6 +152,7 @@ const Container = styled.div`
     overflow-y: scroll;
     left: 0;
     background-color: black;
+    z-index: 100;
 
     hr {
         margin-top: 20px;
@@ -218,7 +219,7 @@ const ModalHome = styled.div`
     justify-content: center;
     width: 25%;
     font-size: 10px;
-    padding: 25px;
+    padding: 0 25px 25px 25px;
     div {
         display: flex;
         flex-direction: column;
@@ -226,9 +227,14 @@ const ModalHome = styled.div`
         justify-content: center;
         align-items: center;
         margin-bottom: 50px;
+        border-radius: 10px;
 
         span {
             margin-top: 10px;
+        }
+
+        div:hover {
+            background-color: gray;
         }
     }
 `

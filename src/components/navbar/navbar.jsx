@@ -3,12 +3,11 @@ import {styled} from 'styled-components'
 import './navbar.css'
 import { LuMenu } from 'react-icons/lu'
 // import logo from '../../logo.svg'
-import { IoIosMore, IoIosNotifications } from 'react-icons/io'
+import { IoIosNotifications } from 'react-icons/io'
 import { RiVideoUploadLine } from 'react-icons/ri'
 import { CgProfile } from 'react-icons/cg'
 import { CiSearch} from 'react-icons/ci'
-// import {useDispatch, useSelector } from 'react-redux'
-// import { increment, decrement } from '../../features/counter/counterSlice'
+
 
 const Navbar = ({setToggleState}) => {
 
@@ -20,7 +19,7 @@ const Navbar = ({setToggleState}) => {
   return (
     <AppNav>
         <NavLeft>
-            <LuMenu color='white' size={24} 
+            <LuMenu color='white' size={30} 
                 onClick={setToggleState}
                 className='menu'
             />
@@ -50,8 +49,8 @@ const Navbar = ({setToggleState}) => {
                 />
                 <p style={{display: `${displayModal === "not" ? "block" : "none"}`}}>Notifications</p>
             </div>
-            <div>
-                <CgProfile color='white' size={40}/>
+            <div className='profile'>
+                <img src="https://picsum.photos/100/100" alt="" />
             </div>
         </NavRight>
     </AppNav>
@@ -64,7 +63,7 @@ const AppNav = styled.nav`
     align-items: center;
     background-color: #0F0F0F;
     width: 100%;
-    padding: 10px 30px;
+    padding: 10px 20px;
     position: fixed;
     justify-content: space-between;
     top: 0;
@@ -170,6 +169,15 @@ const NavRight = styled.div`
             top: 180%;
             font-size: 12px;
             display: none;
+        }
+    }
+
+    .profile {
+        width: 10%;
+        border-radius: 50%;
+        img {
+            width: 100%;
+            border-radius: 50%;
         }
     }
 `

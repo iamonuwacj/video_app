@@ -19,6 +19,10 @@ a {
     align-items: center;
 }
 
-.App {
+/* .App {
     background-color: #0F0F0F;
+} */
+.App {
+    position: relative;
+    background-color: black;
 }

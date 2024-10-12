@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/navbar/navbar';
 import Sidebar from './components/sidebar/sidebar';
+import Main from './components/main/Main';
 
 
 
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       <Navbar setToggleState={() => setToggle(!toggle)}/>
       <Sidebar toggleState={toggle}/>
+      <Main toggleState={toggle}/>
     </div>
   );
 }
